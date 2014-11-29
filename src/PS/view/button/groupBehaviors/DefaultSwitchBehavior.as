@@ -30,7 +30,6 @@ package PS.view.button.groupBehaviors {
 		
 		public function init(btnList:Vector.<PsButton>):void 
 		{
-			trace('BEHAVIOR INIT');
 			list = btnList;
 		}
 		

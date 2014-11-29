@@ -46,13 +46,39 @@ package Swarrow.tools
 			rect.height = value;
 			alarm();
 		}
-		
+		public function set bottomRight(value:int):void
+		{
+			rect.width = value-rect.x;
+			alarm();
+		}
+		public function set bottomLower(value:int):void
+		{
+			rect.height = value-rect.y;
+			alarm();
+		}
+		public function set bottomLeft(value:int):void
+		{
+			rect.width += rect.x - value;
+			rect.x = value;
+			alarm();
+		}
+		public function set bottomUpper(value:int):void
+		{
+			rect.height += rect.y - value;
+			rect.y = value;
+			alarm();
+		}
 		//getters:
 		
 		public function get x():int 	{return rect.x}
 		public function get y():int 	{return rect.y}
 		public function get width():int {return rect.width}
-		public function get height():int{return rect.height}
+		public function get height():int { return rect.height }
+		
+		public function get bottomRight():int{return rect.x+rect.width}
+		public function get bottomLeft():int{return rect.x}
+		public function get bottomLower():int{return rect.y+rect.height}
+		public function get bottomUpper():int{return rect.y}
 		
 	}
 

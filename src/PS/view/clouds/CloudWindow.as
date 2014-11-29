@@ -1,5 +1,8 @@
 package PS.view.clouds 
 {
+	import Swarrow.tools.valueManagers.objectBased.IntValueManager;
+	import Swarrow.tools.valueManagers.interfaces.IintValueManager;
+	import Swarrow.tools.valueManagers.funcBased.IntValueManager2;
 	import com.greensock.loading.core.DisplayObjectLoader;
 	import flash.display.DisplayObject;
 	import flash.display.InteractiveObject;
@@ -18,9 +21,6 @@ package PS.view.clouds
 	import PS.view.clouds.interfaces.IcloudWindow;
 	import PS.view.clouds.interfaces.ICWcloseBehavior;
 	import PS.view.clouds.interfaces.ICWopenBehavior;
-	import view.patternMagic.valueManagers.funcBased.IntValueManager2;
-	import view.patternMagic.valueManagers.interfaces.IintValueManager;
-	import view.patternMagic.valueManagers.objectBased.IntValueManager;
 	
 	/**
 	 * ...

@@ -1,8 +1,7 @@
 package Swarrow.models.screenManager.bases 
 {
-	import flash.utils.Dictionary;
-	import PS.models.screenManager.interfaces.Iscreen;
-	import PS.models.screenManager.interfaces.IscreenHierarchy;
+	import Swarrow.models.screenManager.interfaces.IscreenHierarchy;
+	import Swarrow.models.screenManager.interfaces.Iscreen;
 	
 	/**
 	 * ...
@@ -10,8 +9,8 @@ package Swarrow.models.screenManager.bases
 	 */
 	public class SimpleHierarchy implements IscreenHierarchy 
 	{
-		private var hr:Dictionary;
-		public function SimpleHierarchy(hierarchy:Dictionary) 
+		private var hr:Object;
+		public function SimpleHierarchy(hierarchy:Object) 
 		{
 			hr = hierarchy;
 		}

@@ -1,12 +1,13 @@
 package Swarrow.models.screenManager.bases 
 {
+	import Swarrow.models.screenManager.interfaces.Iscreen;
 	import flash.display.DisplayObject;
-	import PS.models.screenManager.interfaces.IscreenManager;
+	import flash.events.Event;
 	import flash.geom.Rectangle;
 	import flash.display.DisplayObjectContainer;
 	import flash.display.Sprite;
-	import PS.models.screenManager.interfaces.Iscreen;
-	import PS.tools.RectangleDispatcher;
+	import Swarrow.models.screenManager.interfaces.IscreenManager;
+	import Swarrow.tools.RectangleDispatcher;
 	
 	/**
 	 * ...
@@ -14,7 +15,6 @@ package Swarrow.models.screenManager.bases
 	 */
 	public class ScreenBase extends Sprite implements Iscreen 
 	{
-		protected var currentRect:RectangleDispatcher;
 		protected var currentManager:IscreenManager
 		public function ScreenBase() 
 		{
@@ -24,16 +24,32 @@ package Swarrow.models.screenManager.bases
 		
 		/* INTERFACE PS.models.screenManager.interfaces.Iscreen */
 		
-		public function show(container:DisplayObjectContainer, rectangle:RectangleDispatcher, params:Object, manager:IscreenManager):void 
+		public function show(container:DisplayObjectContainer,  params:Object, manager:IscreenManager):void 
 		{
 			container.addChild(this);
-			currentRect = rectangle;
 			currentManager = manager;
+			currentManager.rectangle.addEventListener(Event.CHANGE, rectangle_change);
+			rectangleChange();
 		}
 		
+		private function rectangle_change(e:Event):void 
+		{
+			rectangleChange();
+		}
+		
+		protected function rectangleChange():void 
+		{
+			
+		}
+		protected function get rect():RectangleDispatcher
+		{
+			return currentManager.rectangle;
+		}
 		public function hide():void 
 		{
 			if (parent) parent.removeChild(this);
+			currentManager.rectangle.removeEventListener(Event.CHANGE, rectangle_change);
+			currentManager = null;
 		}
 		
 		public function load(data:Object = null):void 

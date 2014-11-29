@@ -1,6 +1,6 @@
 package Swarrow.models.screenManager.interfaces 
 {
-	import darkLib.models.screenManager.stuff.NavigatorCommand;
+	import Swarrow.models.screenManager.stuff.NavigatorCommand;
 	
 	/**
 	 * ...

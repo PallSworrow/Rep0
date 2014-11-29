@@ -136,8 +136,6 @@ package PS.view.button {
 	//INTERFACE PS_starling.view._interfaces.Ibtn =====================================
 		public function tap(callHandler:Boolean = true):void 
 		{
-			//trace(this + 'tap');
-			//trace(this + ' group name: ' + group, _group);
 			var prevPhaze:String = phaze;
 			
 			if (_group)

@@ -4,7 +4,7 @@ package PS.model
 	import model.Hierarchy;
 	import PS.view.screenSystem.Iscreen;
 	import PS.view.screenSystem.IscreenManager;
-	import view.NavigationPanel;
+	import Swarrow.view.NavigationPanel;
 	
 	/**
 	 * ...

@@ -6,10 +6,10 @@
     <movie input="" />
     <movie path="bin\AM.swf" />
     <movie fps="30" />
-    <movie width="800" />
-    <movie height="600" />
-    <movie version="10" />
-    <movie minorVersion="1" />
+    <movie width="980" />
+    <movie height="1200" />
+    <movie version="14" />
+    <movie minorVersion="0" />
     <movie platform="AIR" />
     <movie background="#FFFFFF" />
   </output>

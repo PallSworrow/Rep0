@@ -6,6 +6,7 @@ package model
 	import flash.net.URLRequest;
 	import flash.net.URLRequestMethod;
 	import flash.net.URLVariables;
+	import model.loadedData.SearchData;
 	import model.profiles.MusicianProfile;
 	import Swarrow.models.Globals;
 	import Swarrow.models.Initialiser;
@@ -27,6 +28,11 @@ package model
 		{
 			onComplete = completeHandler;
 			super.init(onSuperInited,config);
+		}
+		override protected function readConfig(data:Object):void 
+		{
+			var res:Object = JSON.parse(String(data));
+			SearchData.init(res.cities, res.goals,res.instruments, res.instTags,res.styles);
 		}
 		private function onSuperInited():void
 		{
