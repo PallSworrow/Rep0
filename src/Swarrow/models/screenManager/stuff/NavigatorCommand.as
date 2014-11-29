@@ -1,4 +1,5 @@
 package Swarrow.models.screenManager.stuff {
+	import Swarrow.models.Globals;
 	/**
 	 * ...
 	 * @author pall
