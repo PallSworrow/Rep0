@@ -80,15 +80,15 @@ package view {
 		
 		public function navigate(command:NavigatorCommand):NavigatorCommand 
 		{
-			switch(command.destination)
+			/*switch(command.destination)
 			{
 				case Hierarchy.USER_PAGE:
-					profileBtn.setPhaze(ButtonPhaze.ACTIVE);
+					profileBtn.tap(false);
 					break;
 				case Hierarchy.SEARCH_PAGE:
-					btnList.getBtn('Музыканты').setPhaze(ButtonPhaze.ACTIVE);
+					btnList.getBtn('Музыканты').tap(false);
 					break;
-			}
+			}*/
 			return command;
 		}
 		

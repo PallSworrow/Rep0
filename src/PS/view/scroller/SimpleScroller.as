@@ -116,7 +116,11 @@ package PS.view.scroller
 		}
 		protected function createPage(data:Object):Ipage
 		{
-			if (_itemProvider is Function) return _itemProvider(data);
+			if (_itemProvider is Function) 
+			{
+				data = _itemProvider(data);
+			}
+			if (data is Ipage) return data as Ipage;
 			
 			var res:EmptyPage = new EmptyPage();
 			if (data is IviewElement) res.addElement(data as IviewElement);

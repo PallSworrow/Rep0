@@ -7,6 +7,7 @@ package
 	import model.Hierarchy;
 	import Swarrow.models.Globals;
 	import Swarrow.models.screenManager.implts.ScreenManager;
+	import Swarrow.models.screenManager.interfaces.InavigationFilter;
 	import Swarrow.models.screenManager.interfaces.IscreenManager;
 	import view.NavigationPanel;
 	
@@ -41,6 +42,8 @@ package
 			
 			manager = new ScreenManager();
 			manager.init(this, new Hierarchy(), new Rectangle(0, navigatePanel.height, Globals.width, Globals.height));
+			manager.navigationFilters = new Vector.<InavigationFilter>;
+			manager.navigationFilters.push(navigatePanel);
 			
 		}
 		
