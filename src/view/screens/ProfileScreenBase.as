@@ -32,7 +32,7 @@ package view.screens
 		private static const PHOTOS3:String = 'photos3';
 		private static const GRAPHICS:String = 'graphics';
 		private static const BTN:String = 'btn';
-		private static const TAGS:String = 'tags';
+		private static const LIST_MODULE:String = 'tags';
 		private static const CHECKBOX:String = 'checkbox';
 		
 		
@@ -133,8 +133,8 @@ package view.screens
 				case BTN:
 					res = createBtn(data);
 					break;
-				case TAGS:
-					res = createTagModule(data);
+				case LIST_MODULE:
+					res = createListModule(data);
 					break;
 				case CHECKBOX:
 					res = createCheckBox(data);
@@ -190,7 +190,7 @@ package view.screens
 			return res;
 			
 		}
-		protected function createTagModule(data:Object):IviewElement
+		protected function createListModule(data:Object):IviewElement
 		{
 			
 		}

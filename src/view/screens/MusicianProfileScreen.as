@@ -1,5 +1,6 @@
 package view.screens 
 {
+	import model.profiles.MusicianProfile;
 	/**
 	 * ...
 	 * @author 
@@ -11,7 +12,25 @@ package view.screens
 		{
 			
 		}
-		
+		private var profile:MusicianProfile;
+		override protected function read(data:Object):Array 
+		{
+			profile = data as MusicianProfile();
+			if (!profile) throw new Error('invaslid input data: ' + data);
+			
+			var res:Array = 
+			[
+				{}
+			
+			
+			
+			
+			
+			
+			
+			
+			]
+		}
 	}
 
 }
