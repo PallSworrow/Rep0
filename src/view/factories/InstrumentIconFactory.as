@@ -33,6 +33,7 @@ package view.factories {
 				assets[InstrumentType.VOCAL] = new EmbedAsset(Embeds.vocal);
 				assets[InstrumentType.WIND] = new EmbedAsset(Embeds.wind);
 			}
+			if (type == 'guitar') type = InstrumentType.GUITAR;
 			if (!assets[type]) throw new Error('invalid instrument type: ' + type);
 			var res:PsImage = new PsImage(assets[type]);
 			res.name = type;

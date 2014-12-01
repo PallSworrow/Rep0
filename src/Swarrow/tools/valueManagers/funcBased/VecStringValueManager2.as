@@ -1,5 +1,5 @@
 package Swarrow.tools.valueManagers.funcBased {
-	import view.patternMagic.valueManagers.interfaces.IvecStringValueManager;
+	import Swarrow.tools.valueManagers.interfaces.IvecStringValueManager;
 	/**
 	 * ...
 	 * @author 

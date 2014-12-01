@@ -36,7 +36,12 @@ package PS.view.previewer.bases {
 		public function SimplePreview(w:int=100,h:int = 100, loader_requestType:String=null,customMask:Sprite=null) 
 		{
 			super();
-			if (customMask) msk = customMask;
+			if (customMask)
+			{
+				msk = customMask;
+				msk.width = w;
+				msk.height = h;
+			}
 			else
 			{
 				msk = new Sprite();

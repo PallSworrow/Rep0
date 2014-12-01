@@ -41,9 +41,12 @@ package
 			addChild(navigatePanel);
 			
 			manager = new ScreenManager();
+			trace('PANEL:', navigatePanel.height);
 			manager.init(this, new Hierarchy(), new Rectangle(0, navigatePanel.height, Globals.width, Globals.height));
 			manager.navigationFilters = new Vector.<InavigationFilter>;
 			manager.navigationFilters.push(navigatePanel);
+			
+			manager.loadScreen(Hierarchy.SEARCH_PAGE);
 			
 		}
 		

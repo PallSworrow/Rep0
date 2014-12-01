@@ -189,6 +189,8 @@ package PS.view.scroller
 			layout.addItem(page);
 			if (!renderControll) page.enable();
 			if (autoUpdate) update();
+			//trace(this, 'addItem height', page.height);
+			//trace(this, 'addItem y', page.y);
 			return layout.length - 1;
 		}
 		public function removeItem(index:int):void 

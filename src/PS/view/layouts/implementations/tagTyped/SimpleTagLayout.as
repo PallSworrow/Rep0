@@ -31,8 +31,8 @@ package PS.view.layouts.implementations.tagTyped {
 				if (list[tag]) removeByTag(tag);
 				list[tag] = item;
 			}
-			if (_placeMethod is Function) _placeMethod(item, tag);
-			else nativePlaceMethod(item, tag);
+			if(autoUpdate)
+			update();
 			addElement(item);
 		}
 		
@@ -51,12 +51,16 @@ package PS.view.layouts.implementations.tagTyped {
 						_placeMethod(list);
 						return;
 						break;
+					case 2:
+						_placeMethod(this, list);
+						return;
+						break;
 				}
 			}
 			for (var tag:String in list)
 			{
 				item = list[tag];
-				if (_placeMethod is Function) _placeMethod(item, tag);
+				if (_placeMethod is Function) _placeMethod(this,item, tag);
 				else nativePlaceMethod(item, tag);
 			}
 			super.update();

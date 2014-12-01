@@ -1,5 +1,5 @@
 package Swarrow.tools.valueManagers.objectBased {
-	import view.patternMagic.valueManagers.interfaces.IstringValueManager;
+	import Swarrow.tools.valueManagers.interfaces.IstringValueManager;
 	/**
 	 * ...
 	 * @author 

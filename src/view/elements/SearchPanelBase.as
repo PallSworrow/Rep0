@@ -27,7 +27,7 @@ package view.elements
 	import PS.view.textView.SimpleText;
 	import view.constants.Fonts;
 	import view.constants.ViewEvent;
-	import view.elements.searchmodules.FlagModule;
+	import view.elements.searchmodules.FlagEditor;
 	import view.elements.searchmodules.interfaces.Ieditor;
 	import view.elements.searchmodules.interfaces.IflagEditor;
 	import view.elements.searchmodules.interfaces.IoptionEditor;
@@ -321,7 +321,7 @@ package view.elements
 		}
 		protected function createFlagBox(defaultValue:Boolean):IflagEditor
 		{
-			return new FlagModule(scroller.width-1);
+			return new FlagEditor(scroller.width-1);
 		}
 		protected function createTagBox(tagsOptions:Vector.<String>, values:Array, numLimit:int=-1):ItagEditor
 		{

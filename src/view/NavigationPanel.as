@@ -50,9 +50,11 @@ package view {
 			
 			
 			
-			avatar = new SimplePreview(100,100,null,createMask());
-			
-			avatar.x = avatar.y = 20;
+			avatar = new SimplePreview(50,50,null,createMask());
+			avatar.y = (bg.height-avatar.height) / 2;
+			avatar.x = avatar.y;
+			try { avatar.load(Data.viewerProfile.photos[0]); }
+			catch(e:Error){}
 			profileBtn.y = 10;
 			profileBtn.x = avatar.x + 20;
 			

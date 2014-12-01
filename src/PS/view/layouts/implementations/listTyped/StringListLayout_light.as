@@ -18,7 +18,7 @@ package PS.view.layouts.implementations.listTyped
 		}
 		override public function addItemTo(item:IviewElement, index:int, forceSize:int = -1):void 
 		{
-			if (vertical && item.width > borderWidth) throw Error('Елемент больше заданного размера таблицы');
+			if (vertical && item.width > borderWidth) throw Error('Елемент больше заданного размера таблицы'+item.width+', '+borderWidth);
 			if (!vertical && item.height > borderHeight) throw Error('Елемент больше заданного размера таблицы');
 			
 			super.addItemTo(item, index, forceSize);

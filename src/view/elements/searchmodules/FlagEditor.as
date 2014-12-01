@@ -14,12 +14,12 @@ package view.elements.searchmodules
 	 * ...
 	 * @author 
 	 */
-	public class FlagModule extends EditorBase implements IflagEditor
+	public class FlagEditor extends EditorBase implements IflagEditor
 	{
 		private var _title:String;
 		
 		private var switcher:Ibtn;
-		public function FlagModule(w:int) 
+		public function FlagEditor(w:int) 
 		{
 			super(w);
 			switcher = createBtn();

@@ -96,7 +96,7 @@ package view.screens
 		}
 		private function onItemTap(prof:MusicianProfile):void
 		{
-			currentManager.loadScreen(Hierarchy.USER_PAGE, prof);
+			currentManager.loadScreen(Hierarchy.MUSICIAN_PAGE, prof);
 		}
 		private function onSearchBtn():void 
 		{
